@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}
+       Home
+{% endblock title %}
+{% block content %}
+       <div class="row text-center">
+              <div>
+                     <h1>Telecome Churn Prediction App</h1>
+              </div>
+              {% if outputs %}
+                     <div class="card text-center">
+                            <div class="card-body">
+                                   <h3 class="card-title">{{ outputs[0] }}</h3>
+                                   <p class="card-text">{{ outputs[1] }}</p>
+                                   <a href="/home" class="btn btn-primary">Try Again</a>
+                            </div>
+                     </div>
+              {% endif %}
+              <form method="POST">
+                     <!-- Add select box (dropdown) for an example -->
+                     {% for col in all_columns %}
+                            {% if col in input_options.keys() %}
+                                   <div>
+                                          <label for="{{ col }}">{{ col }}:</label>
+                                          <select class="form-control" id="{{ col }}" name="{{ col }}">
+                                                 {% for option in input_options.get(col) %}<option value="{{ option }}">{{ option }}</option>{% endfor %}
+                                          </select>
+                                   </div>
+                            {% else %}
+                                   <div>
+                                          {% if col=="tenure" %}
+                                                 <label for="{{ col }}">{{ col }} in Months</label>
+                                          {% elif "charges" in col.lower() %}
+                                                 <label for="{{ col }}">{{ col }} In $</label>
+                                          {% else %}
+                                                 <label for="{{ col }}">{{ col }}</label>
+                                          {% endif %}
+                                          <input type="text" class="form-control" id="{{ col }}" name="{{ col }}">
+                                   </div>
+                            {% endif %}
+                            <br>
+                     {% endfor %}
+                     <br>
+                     <div align="center">
+                            <button type="submit" class="btn btn-primary">Predict</button>
+                     </div>
+              </div>
+       </form>
+</div>
+{% endblock content %}

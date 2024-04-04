@@ -1,0 +1,63 @@
+# Write a journal on df.describe() and box plot
+# try to do it without duplicates
+# try without dropping dummies and without dropping the variables on which groups created
+
+--- univariate analysis summary
+* package range between 61-100 have large number of customers(46 %) - these price range have most number of churners
+* 52 % customers pays less than < 1500 in total charges (these groups have most number of churners)
+* people who have tenure have < 12 months and 61 to 72 months are high(loyal customers),but people who have < 12 churn more and with 62 - 72(5 year) tenure group churn very less
+* people who don't have partner,dependents,young, are more likely to churn
+* People without online security,device protection,tech support,No online backup increase churn rate
+* Monthly Contract People have more churn rate as compared to other groups
+* People who use Electronic check and PaperlessBilling have more chance to churn (we need to check other factors like no dependents,no partner to with these
+to confirm if there is an relation people who are young mostly dependents on these methods)
+
+-- Bivariate Analysis 
+ -- Churned data analysis
+ Gender based 
+ ---------------------
+ * female customers who don't have partners have high churn rate
+ * female customers who don't have multiple connection have high rate,Ironically mail customers have multiple connection tend to churn more
+ * female customers with have fiber optics churn more compared to the male customers who have fiber optics service
+ * Males who don't have online security churn more as compared to the female customers who don't have online security
+ * female customers who don't have steaming service tend to churn more as compared to the female who have steaming service
+ * female customers have month to month Contract type churn compared to male customers
+ * male customers with Electronic billing churn more
+ * female customers have tenure < 12 month churn more also most churned customers who have total charges < 1500 is females
+ * female customers who have monthly payments between 81 - 100 churn more(interesting)
+
+Senior Citizen Vs 
+------------------------
+
+* People who are not senior citizen and who don't have dependents or partner churn more(which confirm our univariate analysis report)
+* People who are not senior citizen and have phone service churn more 
+* People who are not senior citizen and have don't have multiple lines churn more 
+* People who are not senior citizen and have fiber optics service churn more as compared to senior citizen who have fiber optic Services
+* People who are not senior citizen but with PaperlessBilling churn more compared to senior citizen who use PaperlessBilling (IMP)
+* People who are not senior citizen who have monthly payments between 81 - 100 churn more
+
+partner Vs 
+---------------
+
+* customers who don't have partners with phone service churn more
+
+Dependents Vs
+------------------
+People who don't have dependents who have multiple lines churn more  (In former cases customers who don't had multiple connections churned more)
+
+Phone service vs 
+---------------------------
+customers with phone service who also have streaming Services churn less
+
+multiple lines vs
+--------------------------
+
+* customers who don't have multiple lines also don't have online security churn less
+* customers don't have phone service who have optic fiber connection is 0 but these customers have more chance to select DSL service
+* customers who have multiple Services but not online security churn more as compared to people who don't have multiple lines and online security
+* customers who have multiple Services with no tech support churn more as compared to people who don't have multiple lines and tech support
+* customers who have multiple Services with month to month subscription churn less as compared to customers don't have multiple Services and have monthly subscription
+* 
+
+
+
