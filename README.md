@@ -111,7 +111,7 @@ We can observe that the dataset is unbalanced. So SMOTENN is used for sampling
 
 <h2>Getting Started</h2>
 
-1.[RawData](https://github.com/Muhliscm/dsProjects/blob/main/telecome_churn_prediction/Model_building.ipynb) <br>
+1.[RawData](https://github.com/Muhliscm/telecome_churn_prediction/blob/master/churn_original.csv) <br>
 2.[Exploratory Data Analysis scripts](https://github.com/Muhliscm/telecome_churn_prediction/blob/master/credit_churn_EDA.ipynb)<br>
 3.[Machine learning model building scripts](https://github.com/Muhliscm/telecome_churn_prediction/blob/master/01_Model_building.ipynb)<br>
 
